@@ -13,7 +13,7 @@ class BubbleSort
           swapped += 1
         end
       end
-      break if swapped < 1
+    break if swapped < 1
     end
     array
   end
