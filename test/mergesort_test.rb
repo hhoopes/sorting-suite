@@ -1,29 +1,53 @@
 require 'minitest/autorun'
-# require 'mergesort'
+require 'shoulda/context'
+require 'mergesort'
 
-class BubbleSortTest < Minitest::Test
+class MergeSortTest < Minitest::Test
+  context 'merge sort' do
 
-  def test_
+    setup do
+      @insert = MergeSort.new
+      @arr0 = []
+      @arr1 = [6]
+      @arr2 = [5, 3]
+      @arrchar = ['e', 'm', 'f', 't', 'l']
+      @arrbig = [8, 3, 10, 25, 99, 1020, 9, 5]
+      @arrsorted = [0, 1, 2, 3, 4, 5, 6]
+      @reverse = [6, 5, 4, 3, 2, 1, 0]
+      @negative = [-1, -5, -3, -6]
+    end
 
+    should 'sort a simple unordered array' do
+
+      assert_equal @arrbig.sort, @insert.merge_sort(@arrbig)
+    end
+
+    should 'sort a sorted array' do
+      assert_equal @arrsorted.sort, @insert.merge_sort(@arrsorted)
+    end
+
+    should 'return an empty array' do
+      assert_equal @arr0.sort, @insert.merge_sort(@arr0)
+    end
+
+    should 'return an array with 1 element' do
+      assert_equal @arr1.sort, @insert.merge_sort(@arr1)
+    end
+
+    should 'sort an unsorted array with 2 element' do
+      assert_equal @arr2.sort, @insert.merge_sort(@arr2)
+    end
+
+    should 'sort an array which is reverse sorted' do
+      assert_equal @reverse.sort, @insert.merge_sort(@reverse)
+    end
+
+    should 'sort an array of negative numbers' do
+      assert_equal @negative.sort, @insert.merge_sort(@negative)
+    end
+
+    should 'sort an array of chars' do
+      assert_equal @arrchar.sort, @insert.merge_sort(@arrchar)
+    end
   end
-
-  def test_
-
-  end
-
-  def test_
-
-  end
-
-  def test_
-
-  end
-
-  def test_
-
-  end
-
-  def test_
-
-  end
-end
+ end

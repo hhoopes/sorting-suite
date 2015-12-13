@@ -3,7 +3,7 @@ require 'shoulda/context'
 require 'bubblesort'
 
 class BubbleSortTest < Minitest::Test
-  context 'bubble sort should' do
+  context 'bubble sort' do
 
     setup do
       @bub = BubbleSort.new
@@ -25,7 +25,7 @@ class BubbleSortTest < Minitest::Test
       assert_equal @arrsorted.sort, @bub.bubble_sort(@arrsorted)
     end
 
-    should 'return an array with no elements' do
+    should 'return an empty array' do
       assert_equal @arr0.sort, @bub.bubble_sort(@arr0)
     end
 

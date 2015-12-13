@@ -3,7 +3,7 @@ require 'shoulda/context'
 require 'insertionsort'
 
 class InsertionSortTest < Minitest::Test
-  context 'insertion sort should' do
+  context 'insertion sort' do
 
     setup do
       @insert = InsertionSort.new
@@ -26,7 +26,7 @@ class InsertionSortTest < Minitest::Test
       assert_equal @arrsorted.sort, @insert.insertion_sort(@arrsorted)
     end
 
-    should 'return an array with no elements' do
+    should 'return an empty array' do
       assert_equal @arr0.sort, @insert.insertion_sort(@arr0)
     end
 
