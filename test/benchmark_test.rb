@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'benchmark'
 
-class BenchmarkTest < Minitest::Test
+class SortingSuite::BenchmarkTest < Minitest::Test
 
-  
+end

@@ -2,11 +2,11 @@ require 'minitest/autorun'
 require 'shoulda/context'
 require 'bubblesort'
 
-class BubbleSortTest < Minitest::Test
+class SortingSuite::BubbleSortTest < Minitest::Test
   context 'bubble sort' do
 
     setup do
-      @bub = BubbleSort.new
+      @sorter = SortingSuite::BubbleSort.new
       @arr0 = []
       @arr1 = [6]
       @arr2 = [5, 3]
@@ -18,35 +18,35 @@ class BubbleSortTest < Minitest::Test
     end
 
     should 'sort a simple unordered array' do
-      assert_equal @arrbig.sort, @bub.bubble_sort(@arrbig)
+      assert_equal @arrbig.sort, @sorter.bubble_sort(@arrbig)
     end
 
     should 'sort a sorted array' do
-      assert_equal @arrsorted.sort, @bub.bubble_sort(@arrsorted)
+      assert_equal @arrsorted.sort, @sorter.bubble_sort(@arrsorted)
     end
 
     should 'return an empty array' do
-      assert_equal @arr0.sort, @bub.bubble_sort(@arr0)
+      assert_equal @arr0.sort, @sorter.bubble_sort(@arr0)
     end
 
     should 'return an array with 1 element' do
-      assert_equal @arr1.sort, @bub.bubble_sort(@arr1)
+      assert_equal @arr1.sort, @sorter.bubble_sort(@arr1)
     end
 
     should 'sort an unsorted array with 2 element' do
-      assert_equal @arr2.sort, @bub.bubble_sort(@arr2)
+      assert_equal @arr2.sort, @sorter.bubble_sort(@arr2)
     end
 
     should 'sort an array which is reverse sorted' do
-      assert_equal @reverse.sort, @bub.bubble_sort(@reverse)
+      assert_equal @reverse.sort, @sorter.bubble_sort(@reverse)
     end
 
     should 'sort an array of negative numbers' do
-      assert_equal @negative.sort, @bub.bubble_sort(@negative)
+      assert_equal @negative.sort, @sorter.bubble_sort(@negative)
     end
 
     should 'sort an array of chars' do
-      assert_equal @arrchar.sort, @bub.bubble_sort(@arrchar)
+      assert_equal @arrchar.sort, @sorter.bubble_sort(@arrchar)
     end
   end
  end
