@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'benchmark'
 
 class BubbleSortTest < Minitest::Test
 
@@ -25,3 +26,5 @@ class BubbleSortTest < Minitest::Test
   def test_
 
   end
+
+end
