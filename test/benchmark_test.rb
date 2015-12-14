@@ -12,7 +12,7 @@ class SortingSuite::BenchmarkTest < Minitest::Test
 
     should "output a total time after benchmarking is done" do
       skip
-      assert_match "took",
+      assert_match "took"
     end
 
     should "reuse the first array for a second sorting function" do

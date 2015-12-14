@@ -3,7 +3,7 @@ require 'pry'
 module SortingSuite
   class BubbleSort
 
-    def bubble_sort(array)
+    def sort(array)
       iterations = array.size - 1
       loop do
         swapped = 0

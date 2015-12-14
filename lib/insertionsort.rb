@@ -3,12 +3,12 @@ require 'pry'
 module SortingSuite
   class InsertionSort
 
-    def insertion_sort(array)
+    def sort(array)
       return array if array.length < 2
       output = []
       output << array.shift
 
-      array.each do | value | # move every element over
+      array.each do | value | # compare every element in the array
         iterations = output.length - 1
 
         0.upto(iterations) do | i | #compare against every new array element
