@@ -1,10 +1,11 @@
-require_relative 'insertionsort'
-require_relative 'mergesort'
-require_relative 'bubblesort'
+require_relative 'lib/insertionsort'
+require_relative 'lib/mergesort'
+require_relative 'lib/bubblesort'
+require 'pry'
 
 module SortingSuite
-
   class Benchmark
+
     attr_accessor :runtimes
 
     def initialize
